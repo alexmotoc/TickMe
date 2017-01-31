@@ -19,7 +19,7 @@
 	</nav>
 
 	<div class="sidebar">
-		<div class="sidebar-content">	
+		<div class="sidebar-content">
 			<a href="bin.html"><i class="material-icons md-60 md-dark sidebar-icons">delete</i></a>
 			<a href="settings.html"><i class="material-icons md-dark md-60 sidebar-icons">settings</i></a>
 		</div>
@@ -41,23 +41,23 @@
 					<option value='large'>20</option>
 				</select>
 			</form>
-			<button type='button'>Update</button><br>
-			
+			<button class="update-buttons" type='button'>Update</button><br>
+
 			<h2>Account</h2><br>
 			<h3>Change password</h3>
 			<form action='' method='get' accept-charset='utf-8'>
-				<label> Old Password:</label><input type='password' name='old_password'><br>
-				<label> New Password:</label><input type='password' name='new_password'><br>
-				<label> Confirm Password:</label><input type='password' name='new_confirm_password'><br>
+				<label> Old Password: </label><input type='password' name='old_password'><br>
+				<label> New Password: </label><input type='password' name='new_password'><br>
+				<label> Confirm Password: </label><input type='password' name='new_confirm_password'><br>
 			</form>
 
 			<h3>Change email</h3>
 			<form action='' method='get' accept-charset='utf-8'>
-				<label> Old Email:</label><input type='email' name='old_email'><br>
-				<label> New Email:</label><input type='email' name='new_email'><br>
-				<label> Confirm Email:</label><input type='email' name='new_confirm_email'><br>
-				<input type='submit' value='Change email'>
+				<label> Old Email: </label><input type='email' name='old_email'><br>
+				<label> New Email: </label><input type='email' name='new_email'><br>
+				<label> Confirm Email: </label><input type='email' name='new_confirm_email'><br>
 			</form>
+			<button class="update-buttons" type="button">Change email</button><br>
 
 			<h3>Email notifications</h3>
 			<form action='' method='get' accept-charset='utf-8'>
@@ -66,14 +66,14 @@
 
 			<h3>Deleted lists</h3>
 				<form action="" method='get' accept-charset='utf-8'>
-				<label>Time until deletion:</label>
+				<label>Time until deletion: </label>
 				<select name='delete_time'>
 					<option value='10'>10 Days</option>
 					<option value='15'>15 Days</option>
 					<option value='month'>1 Month</option>
 				</select><br>
 			</form>
-			<button type='button'>Update</button>
+			<button class="update-buttons" type='button'>Update</button>
 		</div>
 	</div>
 	</body>

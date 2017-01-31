@@ -121,10 +121,11 @@ h3 {
     width: 100%;
 	justify-content: center;
 	align-items: center;
+	overflow: auto;
 }
 
 #centeredRegister {
-	height: 350px;
+	height: 90%;
 	position: absolute;
     top:0;
     bottom: 0;
@@ -134,7 +135,6 @@ h3 {
 }
 
 #centeredForgot {
-	height: 100px;
 	position: absolute;
     top:0;
     bottom: 0;
@@ -174,6 +174,7 @@ h3 {
 	bottom: 0;
 	justify-content: center;
 	align-items: flex-end;
+	overflow: auto;
 }
 
 .content {
@@ -185,6 +186,7 @@ h3 {
 	bottom: 0;
 	justify-content: center;
 	align-items: center;
+	overflow: auto;
 }
 
 .titleBar {
@@ -229,7 +231,7 @@ h3 {
 .list {
 	margin-left: auto;
 	margin-right: auto;
-	width: 250px;
+	width: 100%;
 }
 
 .list input {
@@ -267,16 +269,16 @@ h3 {
   color: #455A64;
 }
 
-.material-icons.md-60 { 
-	font-size: 60px; 
+.material-icons.md-60 {
+	font-size: 60px;
 }
 
-.material-icons.md-100 { 
-	font-size: 100px; 
+.material-icons.md-100 {
+	font-size: 100px;
 }
 
-.material-icons.md-dark { 
-	color: rgba(0, 0, 0, 0.54); 
+.material-icons.md-dark {
+	color: rgba(0, 0, 0, 0.54);
 }
 
 .sidebar-content {
@@ -297,13 +299,23 @@ h3 {
 }
 
 .add-icon {
-	color: #03A9F4;
+	background-color: #03A9F4;
+	color: white;
 	padding: 16px;
+	margin-right: 16px;
+	margin-bottom: 16px;
 	border-radius: 50%;
 	box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
 }
 
+.add-icon:hover {
+	box-shadow: 0 0 8px rgba(0,0,0,.14),0 8px 16px rgba(0,0,0,.28);
+}
+
 .settings-content {
+	height: 90%;
+	margin: 10px;
+	text-align: center;
 	display: block;
 	line-height: 2em;
 }
@@ -317,4 +329,9 @@ h3 {
 
 .edit-list-wrapper:hover {
 	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.update-buttons {
+	color: white;
+	background-color: #03A9F4;
 }
