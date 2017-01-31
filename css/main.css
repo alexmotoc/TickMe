@@ -125,7 +125,7 @@ h3 {
 }
 
 #centeredRegister {
-	height: 90%;
+	height: 350px;
 	position: absolute;
     top:0;
     bottom: 0;
@@ -135,6 +135,7 @@ h3 {
 }
 
 #centeredForgot {
+	height: 100px;
 	position: absolute;
     top:0;
     bottom: 0;
@@ -313,7 +314,6 @@ h3 {
 }
 
 .settings-content {
-	height: 90%;
 	margin: 10px;
 	text-align: center;
 	display: block;
