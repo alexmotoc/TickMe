@@ -7,16 +7,11 @@
 		<title>TickMe</title>
 	</head>
 	<body>
-	<div class="titleContainer">
-		<div class="titleContents">
-			<h1>TickMe</h1>
-			<img class="logo" src="TickMe.jpg"><br>
-			<h2>Sleek, beautiful design. Keep track of things and never forget anything again!</h2>
-		</div>		
-	</div>
+
+	<?php include "indextitle.php"; ?>
 
 	<div class="loginContainer">
-		<form class="loginForm" id="centeredForgot" action='index.html' method='get' accept-charset='utf-8'>
+		<form class="loginForm" id="centeredForgot" action='index.php' method='get' accept-charset='utf-8'>
 			<p>Forgot password</p><br>
 			<input type='text' name='email' placeholder="Email"><br>
 			<button type='submit' id="centeredButton">Request new password</button>

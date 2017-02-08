@@ -9,22 +9,8 @@
 	</head>
 	<body>
 
-	<nav class="titleBar">
-		<div class="logo-wrapper">
-			<a href="main.html"><img class="logo" src="TickMe.jpg"></a>
-		</div>
-		<div class="title-wrapper">
-			<h1>Settings</h1>
-		</div>
-	</nav>
-
-	<div class="sidebar">
-		<div class="sidebar-content">
-			<a href="bin.html"><i class="material-icons md-60 md-dark sidebar-icons">delete</i></a>
-			<a href="settings.html"><i class="material-icons md-dark md-60 sidebar-icons">settings</i></a>
-			<a href="index.html"><i class="material-icons md-60 md-dark sidebar-icons">close</i></a
-		</div>
-	</div>
+	<?php include "titlebar.php"; ?>
+	<?php include "sidebar.php"; ?>
 
 	<div class="content">
 		<div class="settings-content">

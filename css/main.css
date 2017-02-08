@@ -219,29 +219,27 @@ h3 {
 }
 
 .list-wrapper {
-	width: 250px;
-	margin: 10px 10px 10px 10px;
-	background-color: #FFECB3;
-	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-}
 
-.list-wrapper:hover {
-	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 .list {
-	margin-left: auto;
-	margin-right: auto;
-	width: 100%;
+	width: 250px;
+	margin: 15px 15px 15px 15px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	background-color: #FFECB3;
+}
+
+.list:hover {
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 .list input {
-	width: 250px;
+	width: 100%;
 	height: 30px;
 	background-color: transparent;
 	outline: none;
 	color: #455A64;
-	padding-left: 15px;
+	margin-left: 5%;
 	border-style: none;
 	font: 1em 'Roboto', sans-serif;
 }
@@ -250,24 +248,22 @@ h3 {
 	outline: none;
 }
 
-.list-title {
+#list-title {
 	font-weight: bold;
-	height: 35px;
+	font-size: 1.25em;
+	height: 45px;
 }
 
-.list-title::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  font-weight: bold;
-  color: #455A64;
+#list-item {
+	width: 80%;
+	word-break: break-all;
+	display: inline-block;
 }
 
-.list-title::-moz-placeholder { /* Firefox 19+ */
-  font-weight: bold;
-  color: #455A64;
-}
-
-.list-title:-ms-input-placeholder { /* IE 10+ */
-  font-weight: bold;
-  color: #455A64;
+#list-check {
+	width: 10px;
+	display: inline-block;
+	vertical-align: top;
 }
 
 .material-icons.md-60 {
@@ -320,15 +316,8 @@ h3 {
 	line-height: 2em;
 }
 
-.edit-list-wrapper {
-	width: 80%;
-	margin: 10px 10px 10px 10px;
-	background-color: #FFECB3;
-	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-}
-
-.edit-list-wrapper:hover {
-	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+#add-list {
+	width: 70%;
 }
 
 .update-buttons {
