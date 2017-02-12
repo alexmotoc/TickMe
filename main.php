@@ -1,7 +1,14 @@
 <!DOCTYPE html>
 <?php
-require "Database.php";
-$db = new Database();
+session_start();
+if (isset($_SESSION['user_id'])) {
+	require "Database.php";
+	$db = new Database();
+	$query = "SELECT * FROM users WHERE (user_id = '".$_SESSION['user_id']."')";
+	$user = $db->querySingle($query);
+} else {
+	header("Location: index.php");
+}
 ?>
 <html>
 	<head>
@@ -23,11 +30,12 @@ $db = new Database();
 		</div>
 		<div class="list-wrapper">
 			<?php
-			$query = 'SELECT * FROM lists WHERE user_id = "1"';
+			$query = "SELECT * FROM lists WHERE (user_id = '".$user['user_id']."')";
 			$results = $db->query($query);
 
 			while (($list = $results->fetchArray())) {
-				$query = 'SELECT * FROM list_items WHERE list_id = "'.$list['list_id'].'"';
+				$query = 'SELECT * FROM list_items WHERE (list_id = "'.$list['list_id'].'")';
+
 				$item_results = $db->query($query);
 
 			 	$html .= '<div class="list">

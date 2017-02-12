@@ -12,7 +12,7 @@
 
 	<div class="loginContainer">
 		<div class="loginForm">
-			<form action='main.php' method='get' accept-charset='utf-8'>
+			<form action='authenticate.php' method='post' accept-charset='utf-8'>
 				<input type='text' name='username' placeholder='Username'><br>
 				<input type='password' name='user_password' placeholder='Password'><br>
 				<button type='submit'>Log In</button>

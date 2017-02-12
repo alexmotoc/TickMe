@@ -11,9 +11,10 @@
 	<?php include "indextitle.php"; ?>
 
 	<div class="loginContainer">
-		<form class="loginForm" id="centeredRegister" action='main.php' method='get' accept-charset='utf-8'>
+		<form class="loginForm" id="centeredRegister" action='adduser.php' method='post' accept-charset='utf-8'>
 			<p>Register</p><br>
 			<input type='text' name='username' placeholder="Username"><br>
+			<input type='text' name='name' placeholder="Name"><br>
 			<input type='email' name='email' placeholder="Email"><br>
 			<input type='email' name='email_confirm' placeholder="Confirm Email"><br>
 			<input type='password' name='user_password' placeholder="Password"><br>

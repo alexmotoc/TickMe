@@ -18,7 +18,7 @@ INSERT INTO list_items values("2", NULL, "Xbox", "0");
 INSERT INTO list_items values("2", NULL, "TV", "0");
 
 
-INSERT INTO lists values("2",NULL, "to do list", "2017-01-29","2017-01-29 02:02", "1");
+INSERT INTO lists values("2", NULL, "to do list", "2017-01-29","2017-01-29 02:02", "1");
 INSERT INTO list_items values("3", NULL, "cs140", "1");
 INSERT INTO list_items values("3", NULL, "cs139", "0");
 

@@ -3,8 +3,10 @@ DROP TABLE users;
 CREATE TABLE users(
 	user_id integer primary key,
 	username varchar(30),
+	name varchar(30),
 	email varchar(50),
-	password varchar(30)
+	password varchar(256),
+	salt varchar(256)
 );
 
 DROP TABLE lists;
@@ -36,4 +38,3 @@ CREATE TABLE settings(
 	email_notification integer,
 	time_deletion integer
 );
-
