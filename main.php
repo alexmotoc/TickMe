@@ -16,13 +16,17 @@ if (isset($_SESSION['user_id'])) {
 		<link rel="stylesheet" type="text/css" href="css/main.css" />
 		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<script src="js/jquery-3.1.1.min.js"></script>
 		<script type="text/javascript" src="js/list.js"></script>
+		<script type="text/javascript" src="js/additem.js"></script>
+		<script type="text/javascript" src="js/deleteitem.js"></script>
 		<title>TickMe</title>
 	</head>
 	<body>
 
 	<?php include "titlebar.php"; ?>
 	<?php include "sidebar.php"; ?>
+	<?php include "security.php"; ?>
 
 	<div class="content">
 		<div class="button-wrapper">
@@ -38,16 +42,17 @@ if (isset($_SESSION['user_id'])) {
 
 				$item_results = $db->query($query);
 
-			 	$html .= '<div class="list">
-						<form method="get" accept-charset="utf-8">
-							<input id="list-title" type="text" name="list-title" value="'.$list['title'].'"><br>';
+			 	$html .= '<div class="list" id="list-id'.h($list['list_id']).'">
+						<form id="list-form" method="get" accept-charset="utf-8">
+							<input id="list-title" type="text" name="list-title" value="'.h($list['title']).'"><br>';
 				while (($item = $item_results->fetchArray())) {
-					$html .= '<input id="list-check" type="checkbox" name="list-check" ';
+					$html .= '<input id="'.h($item['item_id']).'" class="list-check" type="checkbox" name="list-check" ';
 					if ($item['state'] === 1) {
 						$html .= 'checked';
 					}
 					$html .= '>';
-					$html .= '<input id="list-item" type="text" name="list-item" value="'.$item['content'].'">';
+					$html .= '<input id="list-check-hidden-id'.h($item['item_id']).'" class="list-check-hidden" type="hidden" value="'.h($item['state']).'" name="list-check">';
+					$html .= '<input id="list-item-id'.h($item['item_id']).'" class="list-item-class" type="text" name="list-item" value="'.h($item['content']).'" onkeypress="enterHandler(event)">';
 				}
 				$html .= '</form></div>';
 			}

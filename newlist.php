@@ -12,8 +12,13 @@ if (isset($_SESSION['user_id'])) {
     $query = "SELECT * FROM users WHERE (user_id = '".$_SESSION['user_id']."')";
     $user = $db->querySingle($query);
 
-    $query = "INSERT INTO lists VALUES('".$user['user_id']."', NULL, '$title', '$date', '$date', '1')";
-    $db->exec($query);
+    $query = "INSERT INTO lists VALUES(:user_id, NULL, :title, :date_created, :last_modified, '1')";
+    $stmt = $db->prepare($query);
+    $stmt->bindValue(":user_id", $user['user_id'], SQLITE3_INTEGER);
+    $stmt->bindValue(":title", $title, SQLITE3_TEXT);
+    $stmt->bindValue(":date_created", $time, SQLITE3_TEXT);
+    $stmt->bindValue(":last_modified", $time, SQLITE3_TEXT);
+    $stmt->execute();
 
     $query = "SELECT last_insert_rowid();";
     $result = $db->querySingle($query, true);

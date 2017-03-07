@@ -335,3 +335,11 @@ h3 {
 	color: white;
 	background-color: #03A9F4;
 }
+
+#errors {
+	margin-bottom: 10px;
+}
+
+#error-text {
+	color: red;
+}
